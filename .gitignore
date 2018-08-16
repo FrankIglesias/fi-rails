@@ -44,3 +44,5 @@ latest.dump*
 
 # Ignore .env files
 .env*
+
+test/
