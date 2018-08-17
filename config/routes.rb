@@ -13,5 +13,6 @@ Rails.application.routes.draw do
       end
     end
     resources :books, only: [:show, :index]
+    resources :rents, only: [:create, :index]
   end
 end
