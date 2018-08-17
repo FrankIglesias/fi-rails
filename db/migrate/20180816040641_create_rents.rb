@@ -1,4 +1,4 @@
-class CreateRents < ActiveRecord::Migration[5.2]
+class CreateRents < ActiveRecord::Migration[5.0]
   def change
     create_table :rents do |t|
       t.date :from
