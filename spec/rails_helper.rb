@@ -69,3 +69,11 @@ Shoulda::Matchers.configure do |config|
       with.library :rails
     end
   end
+
+  RSpec.configure do |config|
+    config.include FactoryBot::Syntax::Methods
+
+    config.before do
+      FactoryBot.find_definitions if FactoryBot.factories.count == 0
+    end
+  end
