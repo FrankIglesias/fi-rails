@@ -12,8 +12,7 @@ module Api
         if @rent.save
           @user = User.find(rent_params[:user_id])
           @book = Book.find(rent_params[:book_id])
-          response = @rent.attributes.merge(:user => @user, :book => @book)
-          render json: response, status: :ok
+          render json: response, serializer: RentSerializer, status: :ok
         end
       end
 
